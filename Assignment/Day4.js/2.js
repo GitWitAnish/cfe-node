@@ -5,3 +5,20 @@ const students = [
     { name: "Gopal", age: 21, scores: [55, 60, 65] },
   ];
   
+
+
+  function calculateAverage(scores) {
+    const total = scores.reduce((sum, score) => sum + score, 0);
+    return total / scores.length;
+  }
+
+
+  function averageScores(students) {
+    return students.map(student => ({
+      name: student.name,
+      averageScore: calculateAverage(student.scores)
+    }));
+  }
+
+
+  console.log("Average Scores:", averageScores(students));
