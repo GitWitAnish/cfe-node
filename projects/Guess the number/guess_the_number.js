@@ -7,6 +7,7 @@ const number = Math.floor(Math.random() * 100) + 1;
 
 function askNum() {
   readline.question('Guess a number between 1 and 100: ', guess => {
+
     const num = parseInt(guess);
 
     if (num === number) {
